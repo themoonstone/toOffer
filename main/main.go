@@ -2,24 +2,30 @@ package main
 
 import (
 	"fmt"
-	"github.com/themoonstone/toOffer1/first"
+	"github.com/themoonstone/toOffer/secondary/list"
 )
 
 var data []int = []int{1}
 
 func main() {
-	//fmt.Println(toOffer.Permutation("t"))
-	//first.Search2(data, 8)
-	//fmt.Println(first.Search2(data, 1))
-	//first.MinArray([]int{1, 3, 5})
-	//fmt.Println(first.MinArray([]int{1, 3, 5}))
-	data := []int{1,2}
-	//first.QuickSort(data)
-	//fmt.Println("data:",data)
-	fmt.Println(first.ThirdMax(data))
-	//first.QuickSort(data)
-	//fmt.Println(data)
-	//fmt.Println()
+	l1 := &list.ListNode{
+		Val:  1,
+		Next: &list.ListNode{
+			Val:  2,
+			Next: &list.ListNode{
+				Val:  3,
+				Next: &list.ListNode{
+					Val:  4,
+					Next: &list.ListNode{
+						Val:  5,
+						Next: nil,
+					},
+				},
+			},
+		},
+	}
+
+	fmt.Println(list.GetKthFromEnd(l1,2))
 }
 
 //var nodes = &tree.TreeNode{

@@ -98,7 +98,7 @@ func _quickSort1(nums []int, l int, r int) {
 	if l >= r {
 		return
 	}
-	p := _partition(nums, l, r)
+	p := onePartition(nums, l, r)
 	//lt, gt := _threeWayPartition(nums, l, r)
 
 	_quickSort1(nums, l, p-1)
